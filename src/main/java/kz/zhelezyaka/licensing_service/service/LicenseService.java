@@ -24,7 +24,7 @@ public class LicenseService {
             license.setOrganizationId(organizationId);
             responseMessage = String.format(
                     "This is the post and the object is: %s",
-                    license.toString());
+                    license);
         }
         return responseMessage;
     }
@@ -35,13 +35,13 @@ public class LicenseService {
             license.setOrganizationId(organizationId);
             responseMessage = String.format(
                     "This is the put and object is: %s",
-                    license.toString());
+                    license);
         }
         return responseMessage;
     }
 
     public String deleteLicense(String licenseId, String organizationId) {
-        String responseMessage = null;
+        String responseMessage;
         responseMessage = String.format(
                 "Deleting license with id %s for the organization %s",
                 licenseId, organizationId);
