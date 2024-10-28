@@ -22,7 +22,6 @@ public class LicenseService {
         return license;
     }
 
-//    @Qualifier("messageSource")
     @Autowired
     MessageSource messages;
 
