@@ -11,6 +11,10 @@ import java.util.Random;
 
 @Service
 public class LicenseService {
+
+    @Autowired
+    MessageSource messages;
+
     public License getLicense(String licenseId, String organizationId) {
         License license = new License();
         license.setId(new Random().nextInt(1_000));
@@ -21,9 +25,6 @@ public class LicenseService {
         license.setLicenseType("full");
         return license;
     }
-
-    @Autowired
-    MessageSource messages;
 
     public String createLicense(License license, String organizationId, Locale locale) {
         String responseMessage = null;
